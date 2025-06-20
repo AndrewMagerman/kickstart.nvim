@@ -541,7 +541,6 @@ require('lazy').setup({
           end
         end,
       })
-      require('lspconfig').java_language_server.setup {}
       -- Change diagnostic symbols in the sign column (gutter)
       -- if vim.g.have_nerd_font then
       --   local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
@@ -600,9 +599,16 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         pyright = {},
-        java_language_server = {},
-        --    java_language_server = {
-        --      filetypes = { 'java' },
+        -- Example LSP server configuration
+        -- lua_ls = {
+        --   filetypes = { 'lua' },
+        --   settings = {
+        --     Lua = {
+        --       workspace = { checkThirdParty = false },
+        --       telemetry = { enable = false },
+        --     },
+        --   },
+        -- },
         --      settings = {},
         --    },
         -- rust_analyzer = {},
