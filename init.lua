@@ -164,20 +164,6 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-  'mfussenegger/nvim-jdtls',  -- Java LSP support
-  {
-    'williamboman/mason.nvim',
-    dependencies = {
-      'williamboman/mason-lspconfig.nvim',
-    },
-    config = function()
-      require('mason').setup()
-      require('mason-lspconfig').setup({
-        ensure_installed = { 'jdtls' },
-        automatic_installation = true,
-      })
-    end
-  },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
