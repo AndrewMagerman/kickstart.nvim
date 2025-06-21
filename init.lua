@@ -997,3 +997,6 @@ end)
 vim.keymap.set('n', '<C-S-N>', function()
   harpoon:list():next()
 end)
+
+vim.api.nvim_set_hl(0, 'WhichKeyFloat', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' }) -- or your theme's background
